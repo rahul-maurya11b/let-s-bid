@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Place bid
+{% endblock %}
+
+{% block main %}
+<h2 >Product to bid</h2>
+<hr size="30" noshade>
+<div>
+    <div class="column">
+        <img src="/static/nothing.webp" class="column" alt="nothing" style="width:100%">
+    </div>
+    <ul class="list-group bg-dark" style="width:65%">
+        <li class="list-group-item">Nothing Phone (1) (White, 256 GB)  (12 GB RAM)</li>
+
+        <li class="list-group-item list-group-item-primary">16.64 cm (6.55 inch) Full HD+ Display
+        </li>
+        <li class="list-group-item list-group-item-secondary">50MP + 50MP | 16MP Front Camera</li>
+        <li class="list-group-item list-group-item-success">4500 mAh Lithium-ion Battery</li>
+        <li class="list-group-item list-group-item-danger">Qualcomm Snapdragon 778G+ Processor</li>
+        <li class="list-group-item list-group-item-warning">Meet the Glyph Interface. A New Way to Communicate</li>
+        <li class="list-group-item list-group-item-info">1 Billion Colours</li>
+        <li class="list-group-item list-group-item-light">True-to-Life Full HD Flexible OLED Display with HDR10+ for Richer Colour and Deeper Contrasts.</li>
+        <li class="list-group-item list-group-item-dark">
+            Battery: 4500 mAh supports 33W fast charging</li>
+        <li class="list-group-item list-group-item-danger">
+            Box items: Handset, USB-C Cable, Sim Tray Ejector, Safety Information and Warranty Card</li>
+        <li class="list-group-item list-group-item-secondary">For more info visit Link in navigation bar.</li>
+      </ul>
+
+  </div>
+  <hr size="30" noshade>
+    {% if error %}
+        <p id="strong"><strong >Error</strong> : {{error}}</p>
+    {% endif %}
+  <form action="/index" method="post">
+    <div class="mb-3">
+        Enter bid Details
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username"
+            placeholder=" Enter your username"  type="text" >
+    </div>
+    <div class="mb-3">
+        <!-- <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="product" name="product"
+            placeholder=" Select Product"  type="text" > -->
+        <select autocomplete="off" autofocus class="form-control mx-auto w-auto" id="product" name="product"
+        placeholder=" Select Product"  type="text">
+            <option >Select</option>
+            <option >Nothing Phone(1)</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" id="bid" name="bid" placeholder="Enter your bid Price($)" type="number" >
+        Base Price for bid is: ${{winner}}
+    </div>
+    <hr size="5" noshade>
+    <div class="mb-3" >
+        <a href="https://molgroup.info/en/show/altalanos_dokumentumok/online_bidding_terms_and_conditions/conditions_of_online_bidding_english.pdf">Accept Terms and Conditions</a> <input class=" mx-auto w-auto" value="1" id="checkbox" name="checkbox" type="checkbox" >
+    </div>
+
+    <button class="btn btn-danger mx-3 " type="submit">Submit</button>
+</form>
+<hr size="30" noshade>
+<p id =p>******Last Day of bid is Today******</p>
+{% endblock %}

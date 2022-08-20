@@ -1,0 +1,53 @@
+.background{
+    background: rgba(0, 0, 0, 0.7) url('bg1.jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+    color: white;
+    padding: 200px;
+}
+.background1{
+    background: rgba(0, 0, 0, 0.7) url('bg2.jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+    color: white;
+    /* padding: 200px; */
+}
+strong{
+    color:red;
+}
+#strong{
+    color:red;
+}
+.list-group{
+    font-weight: bold;
+    gap:2px;
+    margin:10px;
+}
+.card-img-top{
+    width:60%;
+    background-color: black;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('nothing.webp');
+
+
+}
+
+.column{
+    float: right;
+    width: 33.33%;
+    border: 10px solid darkgrey;
+    padding: 1px;
+  }
+  #p{
+    margin: -41px;
+    color:red;
+
+  }
+  #bid .bidd{
+    margin:-52px;
+    font-weight: bold;
+  }
+/* .product{
+    height:100vh;
+} */
+

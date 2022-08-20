@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Bid winner
+{% endblock %}
+
+{% block main %}
+<h3>Bid winner from all users</h3>
+<hr size="30" noshade>
+<h3>Winner Details</h3>
+<hr size="30" noshade>
+<form action="/winner" method="get">
+
+    {% for item in history %}
+    <h3>Username    : {{item['username']}}</h3>
+    <h3>Price of Bid: ${{winner}}</h3>
+    <h3>Product     : {{item['product']}}</h3>
+    <h3>Bid Date    : {{item['date']}}</h3>
+    {%endfor%}
+
+</form>
+{% endblock %}

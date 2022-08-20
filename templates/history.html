@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Bidding History
+{% endblock %}
+
+{% block main %}
+<h3>Bidding history from all users</h3>
+<hr size="30" noshade>
+<form action="/history" method="get">
+
+    <table class="table table-dark table-hover table-striped table-bordered">
+        <tr>
+            <thead class="thead-dark">
+                <th>Sno.</th>
+                <th>Username</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Date</th>
+            </thead>
+        </tr>
+        {% for item in history %}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{item['username']}}</td>
+            <td>{{item['product']}}</td>
+            <td>{{item.bid}}</td>
+            <td>{{item.date}}</td>
+
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</form>
+{% endblock %}

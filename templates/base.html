@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+  <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
+  <link href="/static/styles.css" rel="stylesheet">
+
+  <title>Lets bid{% block title %}{% endblock %}</title>
+</head>
+
+<body class="background">
+  <hr size="15" noshade>
+  <p id="bid" style="color: yellow;">Bidding is an offer (often competitive) to set a price tag by an individual or
+    business for a product or service or
+    a demand that something be done. Bidding is used to determine the cost or value of something.
+
+    Bidding can be performed by a person under influence of a product or service based on the context of the situation.
+    In the context of auctions, stock exchange, or real estate, the price offer a business or individual is willing to
+    pay is called a bid. In the context of corporate or government procurement initiatives, in Business and Law school
+    students actively bid for high demand elective courses that have a maximum seat capacity though a course bidding
+    process using pre allocated bidding points or e-bidding currency on course bidding systems. The price offer a
+    business or individual is willing to sell is also called a bid. The term "bidding" is also used when placing a bet
+    in card games. Bidding is used by various economic niches for determining the demand and hence the value of the
+    article or property, in today's world of advanced technology, the Internet is a favoured platform for providing
+    bidding facilities; it is a natural way of determining the price of a commodity in a free market economy.<a
+      href="https://en.wikipedia.org/wiki/Bidding">Source</a></p>
+  <hr size="15" class="bidd" noshade>
+  <nav class="navbar navbar-expand-lg">
+
+
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      </div>
+    </div>
+  </nav>
+
+  <main class="container-fluid py-5 text-center ">
+    {% block main %}{% endblock %}
+  </main>
+</body>

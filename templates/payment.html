@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Payment
+{% endblock %}
+
+{% block main %}
+
+<h3>Payment And Address</h3>
+<hr size="30" noshade>
+<h3>Winner Details</h3>
+<hr size="30" noshade>
+<form action="/payment" method="post">
+
+    {% for item in history %}
+    <h4>Hello {{item['username']}} you are the winner of this Auction your Last bid price is: ${{winner}} for
+        {{item['product']}} on {{item['date']}} please provide your address so we can deliver your product to you. </h4>
+    {%endfor%}
+    <hr size="3" noshade>
+    <h3>Payment mode: Cash On Delivery available</h3>
+    <hr size="3" noshade>
+    <h3>Enter Delivery Details below:</h3>
+</form>
+<form action="/payment"method="post">
+    <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">@</span>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email" >
+      </div>
+      {% if error2 %}
+        <p id="strong"><strong >Error</strong> : {{error2}}</p>
+      {% endif %}
+      <hr size="" noshade>
+    <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Name</span>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Name" >
+      </div>
+      {% if error1 %}
+        <p id="strong"><strong >Error</strong> : {{error1}}</p>
+      {% endif %}
+      <hr size="" noshade>
+    <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Address</span>
+        <input type="text" class="form-control" id="address" name="address" placeholder="Address" >
+      </div>
+      {% if error3 %}
+        <p id="strong"><strong >Error</strong> : {{error3}}</p>
+      {% endif %}
+      <hr size="3" noshade>
+      <button class="btn btn-danger mx-3 " type="submit">Submit</button>
+</form>
+
+{% endblock %}
